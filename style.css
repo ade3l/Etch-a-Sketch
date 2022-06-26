@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    height: 500px;
+    width: 500px;
+}
+.row{
+    flex-grow: 1;
+    display: flex;
+    justify-content: stretch;
+}
+
+.pixel{
+    border: 1px solid black;
+    flex-grow: 1;
+}
