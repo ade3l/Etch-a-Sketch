@@ -1,8 +1,9 @@
 //Number of pixels = side * side
 let side = 16;
 let grid = document.querySelector(".grid");
-let drawing = false;
-
+let sideSize = document.querySelector(".sideSize");
+let drawing = true;
+let color = "#658CE6";
 function createGrid(){
     for(let i=0; i<side; i++){
         let row = document.createElement('div');
@@ -23,16 +24,21 @@ function createGrid(){
         }
         grid.appendChild(row);
     }
+    // document.body.appendChild(grid);
 }
-function clearGrid(){
-    
+function resetGrid(){
+    grid.textContent=""
+    createGrid();
 }
 createGrid();
 
 let slider = document.querySelector("#sizeSlider");
 slider.addEventListener('change',()=>{
     side = slider.value;
-    clearGrid();
-    createGrid();
+    if(side>100 || side<0) side = 100;
+    sideSize.innerText = side;
+    resetGrid();
 });
-slider.addEventListener('input',()=>{console.log(slider.value)});
+slider.addEventListener('input',()=>{
+    sideSize.innerText = slider.value;
+});
