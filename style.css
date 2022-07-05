@@ -3,6 +3,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 50px;
+    background-color: #F8F0E3;
 }
 .grid{
     display: flex;
@@ -18,7 +19,7 @@ body{
 }
 
 .pixel{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     flex-grow: 1;
 }
 

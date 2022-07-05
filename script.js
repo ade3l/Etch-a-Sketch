@@ -17,7 +17,7 @@ function createGrid(){
             });
             pixel.addEventListener('mouseover',()=>{
                 if(drawing){
-                    pixel.style.backgroundColor = 'black';
+                    pixel.style.backgroundColor = color;
                 }
             })
             row.appendChild(pixel)
@@ -42,3 +42,6 @@ slider.addEventListener('change',()=>{
 slider.addEventListener('input',()=>{
     sideSize.innerText = slider.value;
 });
+
+let colorPicker = document.querySelector("#colorPicker");
+colorPicker.addEventListener('input',()=>{color=colorPicker.value;});
