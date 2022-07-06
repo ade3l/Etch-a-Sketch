@@ -7,18 +7,27 @@
     <title>Etch-a-sketch</title>
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <div class="options">
-    <input type="color" id="colorPicker" value="#658CE6">
-    <div class="sideSize">
-      16
+  <h1>Etch-a-Sketch</h1>
+  <div class="content">
+    
+    <div class="options">
+      <input type="color" id="colorPicker" value="#658CE6">
+      <div class="sizeSelector">
+        <div class="sideSize">
+          16
+        </div>
+        <input type="range" min="4" max="64" value="16" class="slider" id="sizeSlider">
+      </div>
     </div>
-    <input type="range" min="4" max="64" value="16" class="slider" id="sizeSlider">
+      <div class="grid">
+      </div>
   </div>
-    <div class="grid">
-    </div>
-
 
 </body>
 </html>
